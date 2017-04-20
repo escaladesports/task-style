@@ -1,0 +1,23 @@
+{
+  "name": "task-style",
+  "version": "0.0.0",
+  "description": "Sass processing task",
+  "main": "index.js",
+  "repository": "https://github.com/escaladesports/task-style.git",
+  "author": "Kennedy Rose <krose@escaladesports.com> (https://escaladesports.com)",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^6.7.7",
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-filter": "^5.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.4.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "postcss-assets": "^4.1.0",
+    "task-error-notify": "https://github.com/escaladesports/task-error-notify.git",
+    "task-notify": "https://github.com/escaladesports/task-notify"
+  }
+}
