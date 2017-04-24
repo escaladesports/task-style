@@ -9,7 +9,7 @@ const filter = require('gulp-filter')
 const postcss = require('gulp-postcss')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
-const assets = require('postcss-assets')
+const cacheBuster = require('postcss-cachebuster')
 const mqPacker = require('css-mqpacker')
 module.exports = (config, cb) => {
 	gulp.src(`${config.src}/*.scss`)
@@ -22,12 +22,8 @@ module.exports = (config, cb) => {
 			]
 		}))
 		.pipe(postcss([
-			assets({
-				loadPaths: [
-					`./${config.dist}/`
-				],
-				basePath: 'src/',
-				cachebuster: true
+			cacheBuster({
+				imagesPath: `/${config.dist}/`
 			}),
 			autoprefixer({
 				browsers: config.browsers
